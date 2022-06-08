@@ -2,6 +2,7 @@
 * {
   font-family: new-order, sans-serif;
   scroll-behavior: smooth;
+
 }
 nav a{
   text-decoration: none;
@@ -9,7 +10,9 @@ nav a{
 
 }
 
-
+a {
+  text-decoration: none;
+}
 nav {
   height: 100px;
   position: fixed;
@@ -97,6 +100,10 @@ header {
   border-radius: 4px;
   cursor: pointer;
   margin-left: 60px;
+}
+.button a {
+  color: #a3dacd;
+
 }
 .button:hover {
   background-color: #223235;
