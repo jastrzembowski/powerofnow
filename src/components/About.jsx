@@ -17,7 +17,7 @@ export default function About() {
           necessitatibus. Dolore aliquam accusamus
           quae, voluptates ex sequi.
         </p>
-        <a className="button-outlined">Contact us</a>
+        <a className="button-outlined" href="google.com">Contact us</a>
       </div>
       <img src={bg4} alt="bg4" className="about-img"></img>
     </div>

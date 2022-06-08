@@ -15,7 +15,7 @@ export default function Offers() {
             consequuntur, quae at iste ipsa aperiam quasi vero asperiores.
           </p>
           <p className="price">300$</p>
-          <a className="button">Order</a>
+          <a className="button" href="google.com">Order</a>
         </div>
         <div className="offers-box">
           <h1>Offer</h1>
@@ -26,7 +26,7 @@ export default function Offers() {
             consequuntur, quae at iste ipsa aperiam quasi vero asperiores.
           </p>
           <p className="price">300$</p>
-          <a className="button">Order</a>
+          <a className="button" href="google.com">Order</a>
         </div>{" "}
         <div className="offers-box">
           <h1>Offer</h1>
@@ -37,7 +37,7 @@ export default function Offers() {
             consequuntur, quae at iste ipsa aperiam quasi vero asperiores.
           </p>
           <p className="price">300$</p>
-          <a className="button">Order</a>
+          <a className="button" href="google.com">Order</a>
         </div>
       </div>
     </div>

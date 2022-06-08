@@ -12,7 +12,7 @@ export default function Header() {
           temporibus illum tempora error, amet culpa repellat tenetur deserunt
           adipisci dolore?
         </p>
-        <div className="button"><a>Book now</a></div>
+        <div className="button"><a href="google.com">Book now</a></div>
       </div>
       <div className="subtitles-holder">
       <h2>300+ Happy customers</h2>
