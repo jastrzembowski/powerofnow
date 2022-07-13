@@ -10,18 +10,21 @@ nav a{
 
 }
 
+body{
+  margin:  0px;
+  overflow-x: hidden;
+}
 * > a {
   text-decoration: none;
 }
 nav {
-  height: 100px;
+  height: 50px;
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
   transition: background 0.2s ease-out;
   z-index: 10;
-  transform: translateY(-10px);
 }
 nav ul {
   display: flex;
@@ -30,20 +33,21 @@ nav ul {
   justify-content: space-between;
   width: 25%;
   align-items: center;
-  margin-right: 50px;
 }
 nav li {
   font-family: new-order, sans-serif;
   padding: 20px;
-  font-size: 25px;
-  font-weight: 700;
-  color: #37545a;
+  font-size: 18px;
+  font-weight:300;
+  color: black;
+  transition: 0.5s ease-in-out;
 }
-nav li:hover,
-nav li:focus {
-  color: #223235;
+nav li>a:hover,
+nav li>a:focus {
+  color: rgba(77, 199, 200, 1);
   cursor: pointer;
-  border-bottom: solid 2px;
+  transition: 0.5s ease-in-out;
+
 }
 .active {
   background-color: rgb(255, 255, 255, 0.9);
@@ -83,11 +87,55 @@ header {
   font-weight: 400;
   width: 500px;
 }
-
+.slider-box{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.slider-img{
+  height: 500px;
+  width: auto;
+}
+.slider-text{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 50px;
+  line-height: 1.7;
+}
+.slider-text h1{
+  font-size: 60px;
+  line-height: 1.1;
+  color: white;
+}
+.slider-text p{
+  color: white;
+}
+.contact-button-box{
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 30px;
+  
+  transition: 0.5s ease-in-out;
+  width: fit-content;
+}
+.contact-button-box a{
+  font-size: 22px;
+  padding: 38px 30px;   color: #223235;
+ 
+}
+.contact-button-box:hover{
+  background-color: rgb(228, 147, 147);
+  
+  transition: 0.5s ease-in-out;
+}
 .logo {
   padding-left: 50px;
   cursor: pointer;
 }
+.slider-container{
+  padding-top: 100px;
+  background: linear-gradient(120deg,  rgba(130,180,190,1) 1%, rgba(177,220,241,1) 23%, rgba(163,218,205,1) 57%, rgba(255,255,255,1) 100%);}
 
 .button {
   padding: 15px 60px 15px 60px;
@@ -104,6 +152,24 @@ header {
 .button a {
   color: #a3dacd;
 
+}
+.comp-logo{
+  height: 70px;
+  padding-bottom: 50px;
+  background-color: white;
+  object-fit: contain;
+
+}
+.comp-slides-container{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.comp-slides-container h1{
+  margin-top: 100px;
+  margin-bottom: 70px;
 }
 .button:hover {
   background-color: #223235;
