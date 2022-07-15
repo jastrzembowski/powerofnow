@@ -8,7 +8,7 @@ import logo3 from "../images/comp/logo3.png";
 import logo4 from "../images/comp/logo4.jpg";
 import logo5 from "../images/comp/logo5.png";
 import logo6 from "../images/comp/logo6.png";
-import logo7 from "../images/comp/logo7.jpg";
+import logo7 from "../images/comp/logo7.png";
 import logo8 from "../images/comp/logo8.png";
 import logo9 from "../images/comp/logo9.jpg";
 

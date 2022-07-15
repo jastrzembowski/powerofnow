@@ -18,7 +18,7 @@ export default function Nav() {
       <ul>
         <li><a href="#header">Main</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#offers">Offers</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );
