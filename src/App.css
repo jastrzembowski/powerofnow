@@ -7,7 +7,9 @@ nav a {
   text-decoration: none;
   color: #37545a;
 }
-
+.slick-next, .slick-prev{
+  display: none !important;
+}
 body {
   margin: 0px;
   overflow-x: hidden;
@@ -18,7 +20,7 @@ body {
 nav {
   height: 50px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   transition: background 0.2s ease-out;
@@ -31,6 +33,7 @@ nav ul {
   justify-content: space-between;
   width: 25%;
   align-items: center;
+  padding-right: 20px;
 }
 nav li {
   font-family: new-order, sans-serif;
@@ -88,6 +91,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: flex-end;
 }
 .slider-img {
   height: 500px;
@@ -178,9 +182,11 @@ header {
   margin-bottom: 70px;
 }
 .button:hover {
-  background-color: #223235;
-  color: #a3dacd;
-}
+
+    background-color:#5e767a;
+    border: none;
+  }
+
 .subtitles-holder {
   font-family: new-order, sans-serif;
   font-size: 30px;
@@ -311,10 +317,11 @@ header {
   border-radius: 30px;
   color: white;
   transition: 0.5s ease-in-out;
+  border: none;
 }
 .vid-button a:hover {
-  background-color: #223235;
-  color: #92d1d9;
+    background-color:#5e767a;
+    border: none;
 }
 
 #stats {
@@ -329,6 +336,7 @@ header {
   font-size: 46px;
   color: #37545a;
   margin-top: 70px;
+  text-align: center;
 }
 .stats-container {
   display: flex;
@@ -456,6 +464,11 @@ header {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  border: none;
+}
+.form-button:hover{
+  background-color:#5e767a;
+  border: none;
 }
 .form-button[disabled="disabled"],
 .form-button:disabled {
@@ -654,5 +667,186 @@ svg .outer {
 
   to {
     stroke-dashoffset: 401;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  nav ul{
+    width: auto;
+  }
+  .slider-container{
+    padding-top: 0px;
+  }
+  .header{
+    height: 600px;
+  }
+  .slider-box{
+    height: 600px;
+  }
+  .slider-text{
+    width: 35%;
+  }
+  .slider-img-lana{
+    width: 55%;
+    height: auto;
+  }
+  .main-box-title{
+    font-size: 16px;
+  }
+  .main-box-content, .main-box-list > li {
+    font-size: 14px;
+  }
+  .main-box-icons__holder{
+    width: 35%;
+  }
+  #stats{
+    height: auto;
+  }
+  .main-box-header,
+  .about-box h1,
+  #stats h1{
+    font-size: 35px;
+  }
+  .slider-text h1{
+    font-size: 45px;
+  }
+  .slider-text{
+    padding: 20px 0px 80px 40px;
+  }
+}
+
+@media (max-width: 600px){
+  nav li{
+    padding: 20px 5px;
+  }
+  nav ul{
+    padding-left: 0px;
+  }
+  .slider-text h1{
+    font-size: 25px;
+    padding-left: 30px;
+  }
+  .slider-text p{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .contact-button-box a{
+    padding: 5px 10px;
+  }
+  .contact-button-box {
+    margin-left: 30px;
+  }
+  .slider-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .slider-text{
+    width: 100%;
+    padding: 70px 5px;
+  }
+  .slider-img,
+  .slider-img-lana{
+    width: 100%;
+  }
+  .comp-logo{
+    padding-bottom: 10px;
+  }
+  .comp-slides-container{
+    margin-bottom: 30px;
+  }
+  .main-box-header{
+    padding: 40px 10px;
+    font-size: 30px;
+  }
+  .mockup-img-holder{
+    display: none;
+  }
+  .main-wrapper{
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .main-box-list{
+    padding-left: 10px;
+  }
+  .about-box h1{
+    text-align: center;
+    padding: 0px 20px;
+  }
+  .bg3{
+    width: 90%;
+  }
+  .about-box h1{
+    font-size: 25px;
+  }
+  .vid-button{
+    padding-bottom: 80px;
+  }
+  #stats h1{
+    font-size: 25px;
+    padding: 0px 40px;
+  }
+  .bot-img-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container h1{
+    font-size: 30px;
+  }
+  .contact-container h3{
+    text-align: center;
+    padding: 0px 20px;
+  }
+  .contact-box{
+    width: 95%;
+  }
+  footer{
+    padding: 0px 10px;
+  }
+  .contact-bot-text{
+    margin-bottom: 20px;
+  }
+  .logo{
+    padding-left: 5px;
+  }
+  .about-box h3::before,
+  .about-box h3::after{
+    width: 0px;
+  }
+  .about-box{
+    padding-top: 40px;
+  }
+  .main-box{
+    padding-bottom: 50px;
+  }
+  .fa-solid{
+    font-size: 20px;
+  }
+  .main-box-title{
+    font-size: 14px;
+  }
+  .main-box-icons__holder{
+    padding: 3px;
+    width: 45%;
+  }
+  .form-box{
+    width: 100%;
+  }
+  .form-box input{
+    width: 90%;
+  }
+  .contact-container{
+    height: auto
+  };
+  .form-button{
+    margin: 20px;
+  }
+  .policy-input-box{
+    margin-bottom: 20px;
+  }
+  .stats-bot-img{
+    padding: 5px;
   }
 }

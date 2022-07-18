@@ -27,7 +27,7 @@ function CompSlides() {
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -49,7 +49,7 @@ function CompSlides() {
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         },
