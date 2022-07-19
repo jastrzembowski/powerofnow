@@ -1,5 +1,4 @@
 import React from "react";
-import bg4 from "../images/bg4.jpg";
 import who from "../images/stats/who.png";
 import bett from "../images/stats/bett.jpg";
 

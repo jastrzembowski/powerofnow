@@ -6,6 +6,13 @@ const DATABASE_URL = "https://powerofnow-99c63-default-rtdb.firebaseio.com/";
 export default class Offers extends React.Component {
   constructor(props) {
     super(props);
+    var today = new Date(),
+      date =
+        today.getDate() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getFullYear();
     this.state = {
       name: "",
       id: uuidv4(),
@@ -15,6 +22,7 @@ export default class Offers extends React.Component {
       message: "",
       checked: false,
       sent: false,
+      date: date,
     };
     this.initialState = {
       name: "",
@@ -25,10 +33,14 @@ export default class Offers extends React.Component {
       message: "",
       checked: false,
       sent: false,
+      date: date,
     };
   }
+
   checkChange = () => {
     console.log(this.state.checked);
+    console.log(this.state.today)
+
     if (this.state.checked === false) {
       this.setState(() => ({
         checked: true,
@@ -57,6 +69,8 @@ export default class Offers extends React.Component {
   };
   handleOnSubmit = (event) => {
     event.preventDefault();
+    var date = new Date();
+    this.setState({ date });
     fetch(`${DATABASE_URL}/emails.json`, {
       method: "POST",
       body: JSON.stringify(this.state),
@@ -70,6 +84,7 @@ export default class Offers extends React.Component {
 
     const enabled =
       email.length > 5 && name.length > 1 && phone.length > 8 && checked;
+  
 
     return (
       <>
@@ -129,6 +144,7 @@ export default class Offers extends React.Component {
                   required
                 ></textarea>
               </div>
+
               <div className="policy-input-box">
                 <input
                   type="checkbox"
@@ -159,7 +175,8 @@ export default class Offers extends React.Component {
         {this.state.sent && (
           <div className="contact-container sent-box">
             <h1>
-              Thank you for contact!! <br/>We will respond as soon as it is possible!
+              Thank you for contact!! <br />
+              We will respond as soon as it is possible!
             </h1>
             <p>Power of Now Team</p>
           </div>

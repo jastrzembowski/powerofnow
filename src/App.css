@@ -508,6 +508,25 @@ footer {
   color: #92d1d9;
 }
 
+
+.mails-container{
+  display: flex;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.mails-box{
+  display: flex;
+  width: 200px;
+  height: 350px;
+  flex-direction: column;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgba(130, 180, 190, 1);
+}
+
+
 .chart {
   position: relative;
   display: inline-block;
