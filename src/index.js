@@ -1,20 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import Nav from './components/Nav';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import Mails from './components/Mails';
+import { AuthProvider } from "./contexts/AuthContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Mails from "./components/Mails";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-  <Router>
-        <Nav/>
+    <AuthProvider>
+      <Router>
         <Routes>
           <Route path="/" exact element={<App />} />
           <Route path="/mails" element={<Mails />} />
         </Routes>
-      </Router>  </React.StrictMode>
+      </Router>{" "}
+    </AuthProvider>{" "}
+  </React.StrictMode>
 );
-

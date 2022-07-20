@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <>
       <div className="main-box" id="about">
-        <h1 className="main-box-header">Power of Now - simplified and holistic approach<br/>for employees well-being in one place</h1>
+        <h1 className="main-box-header">Power of now- simplified, holistic and practical knowledge<br/>for employees well-big in one place </h1>
         <div className="main-wrapper">
           <div className="main-box-icons__holder">
             <div className="main-box-top">
@@ -14,11 +14,12 @@ export default function Main() {
               <p className="main-box-title">Holistic approach</p>
             </div>
             <ul className="main-box-list">
-              <li>knowledge from psychology</li>
+              <p>Combined knowledge from:</p>
+              <li>psychology</li>
+              <li>mindfullness</li>
+              <li>business</li>
               <li>meditation</li>
               <li>breathing</li>
-              <li>psychotherapy</li>
-              <li>business</li>
             </ul>
           </div>
           <div className="main-box-icons__holder">
@@ -55,9 +56,9 @@ export default function Main() {
                 Self-help & easy to learn courses{" "}
               </p>
             </div>
-            <p className="main-box-content">
-              well structured courses with separate exercises
-            </p>
+            <ul className="main-box-list">
+              <li>well structured courses with practical exercises</li>
+            </ul>
           </div>
 
           <div className="main-box-icons__holder">
@@ -65,9 +66,9 @@ export default function Main() {
               <i class="fa-solid fa-chart-simple"></i>{" "}
               <p className="main-box-title">Platform measurement features </p>
             </div>
-            <p className="main-box-content">
-              you can track and analyze how far you go and what did you learn
-            </p>
+            <ul className="main-box-list">
+              <li>you can track and analyze your personal results</li>
+            </ul>
           </div>
           <div className="main-box-icons__holder">
             <div className="main-box-top">

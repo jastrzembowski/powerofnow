@@ -79,7 +79,7 @@ export default function About() {
               />
             </svg>
           </figure>{" "}
-          <p>50% absenteeism decrease </p>
+          <p>50% employees absenteeism decrease</p>
         </div>
       </div>
       <div className="bot-img-box">

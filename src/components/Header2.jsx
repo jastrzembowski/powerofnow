@@ -8,9 +8,9 @@ function Header2() {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    dots: false,
-    arrows: true,
+    autoplay: false,
+    dots: true,
+    arrows: false,
     autoplaySpeed: 5000,
     infinite: true,
     responsive: [
@@ -33,7 +33,7 @@ function Header2() {
               <div className="slider-text">
                 <h1>Power of Now makes empoloyees happy</h1>
                 <p>
-                  Our online courses show proven, holistic and simple daily
+                  Our online courses provide proven, holistic and simple daily
                   practices{" "}
                 </p>
                 <div className="contact-button-box">
@@ -50,9 +50,9 @@ function Header2() {
           <div>
             <div className="slider-box" style={{ display: "flex" }}>
               <div className="slider-text">
-                <h1>How does it work?</h1>
+                <h1 className="short">How does it work?</h1>
                 <p>
-                  Our online platform provides diverse ways of content <br />&
+                  Our online platform provides diverse ways of <br />&
                   learning (video, audio & written content){" "}
                 </p>
                 <div className="contact-button-box">
@@ -69,7 +69,7 @@ function Header2() {
           <div>
             <div className="slider-box" style={{ display: "flex" }}>
               <div className="slider-text">
-                <h1>What do we offer?</h1>
+                <h1 className="short">What do we offer?</h1>
                 <p>
                   Our specialist’s help to self-connect, relax, and prevent
                   stress and burnout
