@@ -1,7 +1,6 @@
+import { doc, getFirestore, setDoc } from "@firebase/firestore";
 import { uuidv4 } from "@firebase/util";
 import React from "react";
-
-const DATABASE_URL = "https://powerofnow-99c63-default-rtdb.firebaseio.com/";
 
 export default class Offers extends React.Component {
   constructor(props) {
@@ -23,7 +22,7 @@ export default class Offers extends React.Component {
       checked: false,
       sent: false,
       date: date,
-      done: false
+      done: false,
     };
     this.initialState = {
       name: "",
@@ -35,13 +34,13 @@ export default class Offers extends React.Component {
       checked: false,
       sent: false,
       date: date,
-      done: false
+      done: false,
     };
   }
 
   checkChange = () => {
     console.log(this.state.checked);
-    console.log(this.state.today)
+    console.log(this.state.today);
 
     if (this.state.checked === false) {
       this.setState(() => ({
@@ -69,24 +68,21 @@ export default class Offers extends React.Component {
       sent: true,
     }));
   };
-  handleOnSubmit = (event) => {
+
+  db = getFirestore();
+  addToFirestore = async (event) => {
     event.preventDefault();
-    var date = new Date();
-    this.setState({ date });
-    fetch(`${DATABASE_URL}/emails.json`, {
-      method: "POST",
-      body: JSON.stringify(this.state),
-    })
-      .then(this.handleFormReset)
-      .then(this.setSend);
+    console.log("🚀 ~ file: Offers.jsx ~ line 84 ~ Offers ~ db", this.db);
+    await setDoc(doc(this.db, "emails", this.state.id), this.state)
+        .then(this.handleFormReset)
+        .then(this.setSend);
+
   };
 
   render() {
     const { email, name, phone, checked } = this.state;
-
     const enabled =
       email.length > 5 && name.length > 1 && phone.length > 8 && checked;
-  
 
     return (
       <>
@@ -162,7 +158,7 @@ export default class Offers extends React.Component {
               <button
                 disabled={!enabled}
                 type="submit"
-                onClick={this.handleOnSubmit}
+                onClick={this.addToFirestore}
                 className="form-button"
               >
                 SEND

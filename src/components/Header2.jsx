@@ -5,6 +5,7 @@ import lana from "../images/slider/lana.png";
 import wojt from "../images/slider/wojt.png";
 import sliderImg from "../images/slider/slider-img.png";
 import bgslid from "../images/bg-slid.png";
+
 function Header2() {
   const settings = {
     slidesToShow: 1,

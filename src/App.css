@@ -3,6 +3,9 @@
   font-family: new-order, sans-serif;
   scroll-behavior: smooth;
 }
+.hidden{
+  display: none;
+}
 nav a {
   text-decoration: none;
   color: #37545a;

@@ -1,42 +1,46 @@
 import React, { useState, useEffect, useRef } from "react";
 import MailCard from "./MailCard";
+
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-
-const DATABASE_URL = "https://powerofnow-99c63-default-rtdb.firebaseio.com/";
+import { collection, getDocs, getFirestore, query } from "@firebase/firestore";
 
 function Mails() {
+
   const [mails, setMails] = useState([]);
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login, currentUser, logout } = useAuth();
+
   const navigate = useNavigate();
   useEffect(() => {
     loadData();
   }, []);
   async function handleSubmit(e) {
     e.preventDefault();
-
     try {
       await login(emailRef.current.value, passwordRef.current.value);
       navigate("/mails");
     } catch {}
   }
-
   async function handleLogout() {
     try {
       await logout();
     } catch {}
   }
+
   const loadData = async () => {
-    const response = await fetch(`${DATABASE_URL}/emails.json`);
-    const data = await response.json();
-    const formattedData = Object.keys(data).map((key) => ({
-      id: key,
-      ...data[key],
-    }));
-    setMails(formattedData);
+    const dbRef = getFirestore();
+    let arr = [];
+    const response = query(collection(dbRef, "emails"));
+    const querySnapshot = await getDocs(response);
+    querySnapshot.forEach((doc) => {
+      arr.push(doc.data());
+    });
+    setMails(arr);
   };
+
+
   return (
     <>
       {!currentUser ? (
@@ -70,9 +74,10 @@ function Mails() {
               Wyloguj się
             </button>
             <div className="mails-container">
-              {mails.map((r, id) => (
+              {mails.map((r, index) => (
                 <MailCard
-                  key={id}
+                  key={r.name + index}
+                  id={r.id}
                   name={r.name}
                   phone={r.phone}
                   email={r.email}
@@ -82,12 +87,11 @@ function Mails() {
                   done={r.done}
                 />
               ))}
-            </div>{" "}
+            </div>
           </div>
         </>
       )}
     </>
   );
 }
-
 export default Mails;
