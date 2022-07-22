@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import logo from "../images/logo.png";
-
 export default function Nav() {
   const [nav, setNav] = useState(false);
 

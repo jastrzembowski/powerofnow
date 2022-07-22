@@ -11,7 +11,6 @@ function Mails() {
   const passwordRef = useRef();
   const { login, currentUser, logout } = useAuth();
   const navigate = useNavigate();
-
   useEffect(() => {
     loadData();
   }, []);
@@ -70,20 +69,21 @@ function Mails() {
             <button onClick={() => handleLogout()} className="login-but">
               Wyloguj się
             </button>
-          <div className="mails-container">
-            {mails.map((r, id) => (
-              <MailCard
-                key={id}
-                name={r.name}
-                phone={r.phone}
-                email={r.email}
-                companyName={r.companyName}
-                message={r.message}
-                date={r.date}
-              />
-            ))}
-          </div>          </div>
-
+            <div className="mails-container">
+              {mails.map((r, id) => (
+                <MailCard
+                  key={id}
+                  name={r.name}
+                  phone={r.phone}
+                  email={r.email}
+                  companyName={r.companyName}
+                  message={r.message}
+                  date={r.date}
+                  done={r.done}
+                />
+              ))}
+            </div>{" "}
+          </div>
         </>
       )}
     </>

@@ -23,6 +23,7 @@ export default class Offers extends React.Component {
       checked: false,
       sent: false,
       date: date,
+      done: false
     };
     this.initialState = {
       name: "",
@@ -34,6 +35,7 @@ export default class Offers extends React.Component {
       checked: false,
       sent: false,
       date: date,
+      done: false
     };
   }
 

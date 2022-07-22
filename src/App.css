@@ -95,6 +95,7 @@ header {
   flex-direction: row;
   width: 100%;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .slider-img {
   height: 500px;
@@ -102,6 +103,17 @@ header {
 }
 .slider-img-lana {
   height: 500px;
+}
+.slid-lana{
+  padding-right: 100px;
+  margin-bottom: -100px;
+
+  height: 600px;
+}
+.slid-wojt {
+  height: 700px;
+  margin-bottom: -200px;
+  margin-top: -100px;
 }
 .slider-text {
   display: flex;
@@ -732,13 +744,31 @@ svg .outer {
   width: 100%;
   align-content: center;
   align-items: center;
-  background: linear-gradient(120deg, rgba(185,226,220,1) 0%, rgba(21,97,77,1) 100%);
-
+  background: linear-gradient(
+    120deg,
+    rgba(185, 226, 220, 1) 0%,
+    rgba(21, 97, 77, 1) 100%
+  );
+}
+.footer-links {
+  color: #5e767a;
 }
 .mails-container {
   justify-content: center;
 }
+.bg-slid {
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  opacity: 0.3;
+  transform: translateX(-150px);
+  width: 90vw;
+}
 @media (max-width: 1080px) {
+  .bg-slid {
+    top: 200px;
+    transform: translateX(0px);
+  }
   nav ul {
     width: auto;
   }
@@ -765,6 +795,18 @@ svg .outer {
     margin-left: -100px;
     transform: translateX(30px);
   }
+  .slid-lana{
+    padding-right: 100px;
+    margin-bottom: 0px;
+  
+    width: 55%;
+    height: auto;
+  }
+  .slid-wojt {
+    width: 35%;
+    height: auto;
+    margin-bottom: 0px;
+  transform: translateX(0px); }
   .slider-img-lana {
     width: 55%;
     height: auto;
@@ -795,6 +837,10 @@ svg .outer {
 }
 
 @media (max-width: 600px) {
+  .bg-slid {
+    width: 100vw;
+    top: 200px;
+  }
   nav li {
     padding: 20px 5px;
   }
@@ -824,7 +870,7 @@ svg .outer {
   .slider-box {
     flex-direction: column;
     height: 650px;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
   }
   .slider-text {
@@ -836,6 +882,15 @@ svg .outer {
   .slider-img-lana {
     width: 100%;
     height: auto;
+  }
+  .slid-lana{
+    transform: translateX(0px);
+    margin-left: 0px;
+    padding-right: 0px;
+  }
+  .slid-wojt{
+    width: auto;
+    height: 395px;
   }
   .comp-logo {
     padding-bottom: 10px;

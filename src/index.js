@@ -6,6 +6,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 
 import Mails from "./components/Mails";
+import Rodo from "./components/Rodo";
+import Imprissum from "./components/Imprissum";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +17,8 @@ root.render(
         <Routes>
           <Route path="/" exact element={<App />} />
           <Route path="/mails" element={<Mails />} />
+          <Route path="/rodo" element={<Rodo/>} />
+          <Route path="/imprissum" element={<Imprissum/>} />
         </Routes>
       </Router>{" "}
     </AuthProvider>{" "}

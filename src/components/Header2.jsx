@@ -1,14 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
 
-import sliderMan from "../images/slider/slider-man-1.png";
-import sliderWoman1 from "../images/slider/slider-woman-1.png";
+import lana from "../images/slider/lana.png";
+import wojt from "../images/slider/wojt.png";
 import sliderImg from "../images/slider/slider-img.png";
+import bgslid from "../images/bg-slid.png";
 function Header2() {
   const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     dots: true,
     arrows: false,
     autoplaySpeed: 5000,
@@ -31,6 +32,7 @@ function Header2() {
           <div>
             <div className="slider-box" style={{ display: "flex" }}>
               <div className="slider-text">
+                <img src={bgslid} alt="bg slider" className="bg-slid"></img>
                 <h1>Power of Now makes empoloyees happy</h1>
                 <p>
                   Our online courses provide proven, holistic and simple daily
@@ -50,25 +52,29 @@ function Header2() {
           <div>
             <div className="slider-box" style={{ display: "flex" }}>
               <div className="slider-text">
+                <img src={bgslid} alt="bg slider" className="bg-slid"></img>
+
                 <h1 className="short">How does it work?</h1>
                 <p>
-                  Our online platform provides diverse ways of <br />&
-                  learning (video, audio & written content){" "}
+                  Our online platform provides diverse ways of <br />& learning
+                  (video, audio & written content){" "}
                 </p>
                 <div className="contact-button-box">
                   <a href="/contact">Contact us</a>
                 </div>
               </div>
               <img
-                src={sliderWoman1}
+                src={lana}
                 alt="man smiling"
-                className="slider-img"
+                className="slider-img slid-lana"
               ></img>
             </div>
           </div>
           <div>
             <div className="slider-box" style={{ display: "flex" }}>
               <div className="slider-text">
+                <img src={bgslid} alt="bg slider" className="bg-slid"></img>
+
                 <h1 className="short">What do we offer?</h1>
                 <p>
                   Our specialist’s help to self-connect, relax, and prevent
@@ -79,9 +85,9 @@ function Header2() {
                 </div>
               </div>
               <img
-                src={sliderMan}
+                src={wojt}
                 alt="man smiling"
-                className="slider-img"
+                className="slider-img slid-wojt"
               ></img>
             </div>
           </div>

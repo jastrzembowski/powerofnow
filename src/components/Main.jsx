@@ -1,12 +1,16 @@
 import React from "react";
 
 import bg3 from "../images/bg3.jpg";
-import mockup from "../images/mockup.jpg"
+import mockup from "../images/mockup.jpg";
 export default function Main() {
   return (
     <>
       <div className="main-box" id="about">
-        <h1 className="main-box-header">Power of now- simplified, holistic and practical knowledge<br/>for employees well-big in one place </h1>
+        <h1 className="main-box-header">
+          Power of now- simplified, holistic and practical knowledge
+          <br />
+          for employees well-big in one place{" "}
+        </h1>
         <div className="main-wrapper">
           <div className="main-box-icons__holder">
             <div className="main-box-top">
@@ -75,9 +79,10 @@ export default function Main() {
               <i class="fa-solid fa-shuttle-space"></i>{" "}
               <p className="main-box-title">No experience needed to start </p>
             </div>
-            <p className="main-box-content">
-              you can start implementing knowledge right away
-            </p>
+            <ul className="main-box-list">
+              {" "}
+              <li> you can start implementing knowledge right away</li>
+            </ul>{" "}
           </div>
         </div>
         <div className="mockup-img-holder">
