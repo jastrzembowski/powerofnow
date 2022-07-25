@@ -99,7 +99,7 @@ export default function Main() {
           and its features for free!
         </h1>
         <div className="vid-button">
-          <a href="/contact">Test our platform</a>
+          <a href="https://powerofnow.ec3l.com/log">Test our platform</a>
         </div>
       </div>
     </>
