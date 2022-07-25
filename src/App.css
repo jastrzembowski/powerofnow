@@ -138,6 +138,9 @@ header {
 .slider-text p {
   color: white;
 }
+
+
+
 .contact-button-box {
   border-radius: 20px;
   background-color: white;
@@ -148,12 +151,16 @@ header {
 }
 .contact-button-box a {
   font-size: 22px;
-  padding: 38px 30px;
-  color: #223235;
+  background-color: #37545a;
+  padding: 14px 23px;
+  border-radius: 30px;
+  color: white;
+  transition: 0.5s ease-in-out;
+  border: none;
 }
-.contact-button-box:hover {
-  background-color: #daf0eb;
-
+.contact-button-box a:hover {
+  background-color: #5e767a;
+  border: none;
   transition: 0.5s ease-in-out;
 }
 .logo {
@@ -865,7 +872,8 @@ svg .outer {
   }
 
   .contact-button-box a {
-    padding: 5px 10px;
+    padding: 8px 17px;
+    font-size: 16px;
   }
   .contact-button-box {
     margin-left: 30px;
