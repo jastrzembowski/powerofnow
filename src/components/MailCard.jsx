@@ -25,13 +25,13 @@ function MailCard({
     <>
       {!done && (
         <div className={display ? "mails-box" : "hidden"}>
-          <p>{name}</p>
-          <p>{phone}</p>
-          <p>{email}</p>
-          <p>{companyName}</p>
-          <p>{message}</p>
-          <p>{date}</p>
-          <button onClick={upd}> Done</button>
+          <p><p className="mail-small"> Imię i nazwisko: </p>{name}</p>
+          <p><p className="mail-small">Numer telefonu: </p>{phone}</p>
+          <p><p className="mail-small">Adres email: </p>{email}</p>
+          <p><p className="mail-small">Nazwa firmy:</p> {companyName}</p>
+          <p><p className="mail-small">Wiadomość: </p>{message}</p>
+          <p><p className="mail-small">Data dodania: </p>{date}</p>
+          <button onClick={upd} className="mail-button"> Done</button>
         </div>
       )}
     </>

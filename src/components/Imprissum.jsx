@@ -21,6 +21,19 @@ function Imprissum(props) {
         <li><Link to ="/">Return to main</Link></li>
       </ul>
     </nav>
+    <div className='impriss-box'>
+      <h3>Nota prawna</h3>
+      <p>Dane identyfikacyjne firmy:</p>
+      <p>
+        Tricity Solution Spółka z o.o. z siedzibą w Gdańsku przy ul. Lęborskiej 3B 
+        (80-386), zarejestrowana w rejestrze stowarzyszeń, innych organizacji 
+        społecznych i zawodowych, fundacji oraz samodzielnych publicznych zakładów
+         opieki zdrowotnej Krajowego Rejestru Sądowego prowadzonym przez Sąd 
+         Rejonowy Gdańsk Północ w Gdańsku, VII Wydział Gospodarczy Krajowego 
+         Rejestru Sądowego, pod numerem 0000951189, numer NIP: 5842813640, numer
+          REGON: 521207574.
+      </p>
+    </div>
        </>
     );
 }
